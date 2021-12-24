@@ -1,0 +1,34 @@
+// The general values
+// MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
+
+// MCVERSION
+// - Always matches the Minecraft version the mod is for.
+
+// MAJORMOD
+// - Removing items, blocks, block entities, etc.
+// - Changing or removing previously existing mechanics.
+// - Updating to a new Minecraft version.
+
+// MAJORAPI
+// - Changing the order or variables of enums.
+// - Changing return types of methods.
+// - Removing public methods altogether.
+
+// MINOR
+// - Adding items, blocks, block entities, etc.
+// - Adding new mechanics.
+// - Deprecating public methods. (This is not a MAJORAPI increment since it doesn’t break an API.)
+
+// PATCH
+// - Bugfixes.
+
+{
+  "homepage": "https://github.com/Leialoha/SystematicClient/releases",
+  "1.17.1": {
+    "1.1.0-pre1": "Updated Player Cosmetics API"
+  },
+  "promos": {
+    "1.17.1-latest": "1.1.0-pre1",
+    "1.17.1-recommended": "1.1.0-pre1"
+  }
+}
