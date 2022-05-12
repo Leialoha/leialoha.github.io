@@ -42,7 +42,7 @@ renderCalls.push(renderScene);
 
 var controls = new THREE.OrbitControls( camera );
 
-controls.rotateSpeed = 0;
+controls.rotateSpeed = 0.1;
 controls.zoomSpeed = 0;
 
 controls.minDistance = 3;
