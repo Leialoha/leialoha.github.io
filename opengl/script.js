@@ -76,7 +76,7 @@ scene.add( light2 );
 
 var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
-loader.load( 'https://leialoha.github.io/opengl/base.gltf', function ( data ) {
+loader.load( 'https://leialoha.github.io/opengl/model.gltf', function ( data ) {
 
   
     var object = data.scene;
