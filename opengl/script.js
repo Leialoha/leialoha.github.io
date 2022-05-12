@@ -15,7 +15,7 @@ render();
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 800 );
-camera.position.set(5,5,5);
+camera.position.set(-2.5, 1.5, 0);
 
 var renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
@@ -42,8 +42,8 @@ renderCalls.push(renderScene);
 
 var controls = new THREE.OrbitControls( camera );
 
-controls.rotateSpeed = 0.3;
-controls.zoomSpeed = 0.9;
+controls.rotateSpeed = 0;
+controls.zoomSpeed = 0;
 
 controls.minDistance = 3;
 controls.maxDistance = 20;
@@ -62,22 +62,39 @@ renderCalls.push(function(){
 /* ////////////////////////////////////////////////////////////////////////// */
 
 
-var light = new THREE.PointLight( 0xffffcc, 20, 200 );
-light.position.set( 4, 30, -20 );
-scene.add( light );
+// var light = new THREE.PointLight( 0xffffcc, 20, 200 );
+// light.position.set( 4, 30, -20 );
+// scene.add( light );
 
-var light2 = new THREE.AmbientLight( 0x20202A, 20, 100 );
+var light2 = new THREE.AmbientLight( 0x20202A, 10, 100 );
 light2.position.set( 30, -10, 30 );
 scene.add( light2 );
 
 /* ////////////////////////////////////////////////////////////////////////// */
 
+
+
 var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
 loader.load( 'https://leialoha.github.io/opengl/base.gltf', function ( data ) {
 
+  
     var object = data.scene;
-     object.position.set(0, -10, -0.75);
+     object.position.set(0, 0, 0);
+//     object.rotation.set(Math.PI / -2, 0, 0);
 
+//     TweenLite.from( object.rotation, 1.3, {
+//       y: Math.PI * 2,
+//       ease: 'Power3.easeOut'
+//     });
+
+    // TweenMax.from( object.position, 3, {
+    //   y: -8,
+    //   yoyo: true,
+    //   repeat: -1,
+    //   ease: 'Power2.easeInOut'
+    // });
+    //object.position.y = - 95;
     scene.add( object );
+  //, onProgress, onError );
 });
