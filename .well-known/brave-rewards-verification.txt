@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: leialoha.github.io
+Token: b90b1fef2e9a0ca71e10c036f45fb8159c034b61ac5f4dec52abadb470836f08
